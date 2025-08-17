@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
 public class playermovement : MonoBehaviour
@@ -9,7 +10,8 @@ public class playermovement : MonoBehaviour
     [Header("Jump Settings")]
     [SerializeField] private float jumpDuration = 0.5f;
     [SerializeField] private float groundCheckRadius = 0.2f;
-    [SerializeField] private int wallJumpThroughLayer = 8;
+    //[SerializeField] private int wallJumpThroughLayer = 8;
+    [SerializeField] private LayerMask wallJumpThroughLayer;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
