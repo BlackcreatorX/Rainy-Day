@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7499498805377285238}
   m_Layer: 0
   m_Name: 'CarroRapidoIzquierda '
-  m_TagString: Untagged
+  m_TagString: Auto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

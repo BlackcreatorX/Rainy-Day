@@ -1,5 +1,5 @@
 using System.Collections;
-using UnityEditor.ShaderKeywordFilter;
+
 using UnityEngine;
 
 public class playermovement : MonoBehaviour
@@ -45,6 +45,16 @@ public class playermovement : MonoBehaviour
         float verticalInput = Input.GetAxisRaw("Vertical");
 
         movement = new Vector2(horizontalInput, verticalInput).normalized;
+        
+        // Control del flip del sprite según la dirección del movimiento
+        if (horizontalInput > 0) // Moviéndose a la derecha
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (horizontalInput < 0) // Moviéndose a la izquierda
+        {
+            spriteRenderer.flipX = true;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
